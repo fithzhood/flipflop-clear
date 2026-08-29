@@ -210,19 +210,19 @@ function onCardClick(event) {
 
 function win() {
     setLocked(true);
-        showVictory();
+    showVictory();
 }
 
 function showVictory() {
     const seconds = 1.2;
     document.body.classList.add('rewarding');
 
-        // un lampo di conferma e via con la prossima
-        el.victoryCount.textContent = '★';
-        el.victoryCount.classList.add('show');
+    // un lampo di conferma e via con la prossima
+    el.victoryCount.textContent = '★';
+    el.victoryCount.classList.add('show');
     el.victory.hidden = false;
 
-        // il puzzle nuovo viene montato mentre il lampo è ancora sopra
+    // il puzzle nuovo viene montato mentre il lampo è ancora sopra
     later(seconds * 1000 - HANDOVER_MS, startRound);
     later(seconds * 1000, hideVictory);
 }
