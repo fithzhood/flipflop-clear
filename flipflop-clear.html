@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="theme-color" content="#0e1014">
+    <title>FlipFlop</title>
+    <link rel="icon" href="FlipFlop.png">
+    <link rel="stylesheet" href="flipflop-clear.css?v=6">
+</head>
+<body>
+
+    <!-- Area di gioco: occupa tutta la viewport, la griglia viene posizionata da JS -->
+    <div id="stage" class="stage">
+        <div id="grid" class="grid" role="grid" aria-label="Griglia FlipFlop"></div>
+    </div>
+
+    <!-- HUD: titolo a sinistra, comandi a destra. Non ruba spazio alla griglia. -->
+    <header class="hud">
+        <h1 id="title" class="title" title="FlipFlop">Flip<span>Flop</span></h1>
+        <div class="hud-actions">
+            <button id="restart" class="pill pill-icon" type="button" aria-label="Nuova partita">↻</button>
+            <button id="menuToggle" class="pill" type="button" aria-expanded="false" aria-controls="menu">
+                <span id="sizeLabel">6×6</span>
+            </button>
+        </div>
+    </header>
+
+    <div id="scrim" class="scrim" hidden></div>
+
+    <nav id="menu" class="menu" hidden aria-label="Impostazioni">
+        <p class="menu-label">Dimensione griglia</p>
+        <div id="sizeButtons" class="size-buttons"></div>
+        <button id="newGame" class="btn-primary" type="button">Nuova partita</button>
+    </nav>
+
+    <div id="victory" class="victory" hidden>
+        <span id="victoryCount" class="victory-count"></span>
+    </div>
+
+    <script src="flipflop-clear.js?v=6"></script>
+</body>
+</html>
